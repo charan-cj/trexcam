@@ -74,7 +74,7 @@ function draw() {
   //trex.debug = true;
   background(255);
   text("Score: "+ score, 500,50);
-  camera.position.x = trex.x+300;
+  camera.position.x = trex.x-20;
   camera.position.y = trex.y;
   if (gameState===PLAY){
     
@@ -104,8 +104,7 @@ function draw() {
     gameOver.visible = true;
     restart.visible = true;
     trex.velocityX = 0;
-    trex.x = 50;
-    trex.y = 180;
+    
     
     //set velcity of each game object to 0
     ground.velocityX = 0;
@@ -199,5 +198,6 @@ function reset(){
   console.log(localStorage["HighestScore"]);
   
   score = 0;
-  
+  trex.x = 50;
+    trex.y = 180;
 }
